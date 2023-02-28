@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <h4>Microfrontend - Remote</h4>
+
+    <div>
+        <a mat-button [routerLink]="'/home'" routerLinkActive #rla1="routerLinkActive" [class.active]="rla1.isActive"> Accueil </a>
+        <a mat-button [routerLink]="'/table'" routerLinkActive #rla2="routerLinkActive" [class.active]="rla2.isActive"> Table (Eager Module) </a>
+        <a mat-button [routerLink]="'/graph'" routerLinkActive #rla3="routerLinkActive" [class.active]="rla3.isActive"> Graph (Lazy Module) </a>
+    </div>
+</mat-toolbar>
+  
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
